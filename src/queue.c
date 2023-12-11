@@ -20,7 +20,7 @@ struct pcb_t * dequeue(struct queue_t * q) {
          * */
 	if(empty(q)) return NULL;
         int max = 0;
-        for(int i = 0; i < MAX_QUEUE_SIZE; i++){
+        for(int i = 1; i < q->size; i++){
                 if(q->proc[i]->priority < q->proc[max]->priority){
                         max = i;
                 }
